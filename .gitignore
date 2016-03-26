@@ -22,3 +22,5 @@ config/mailer_daemon.yml
 .byebug_history
 # Ignore application configuration
 /config/application.yml
+/config/deploy
+/lib/capistrano
