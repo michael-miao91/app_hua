@@ -3,7 +3,7 @@
 set :pty, true
 set :application, 'app_hua'
 set :deploy_user, 'rails'
-set :repo_url, 'git@github.com:michael-miao91/app_test.git'
+set :repo_url, 'git@github.com:michael-miao91/app_hua.git'
 
 # setup repo details
 set :scm, :git
