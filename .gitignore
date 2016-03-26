@@ -20,3 +20,5 @@ config/mailer_daemon.yml
 .idea/
 .vagrant
 .byebug_history
+# Ignore application configuration
+/config/application.yml
