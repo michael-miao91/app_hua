@@ -29,7 +29,7 @@ gem 'jbuilder', '~> 2.0'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-gem 'unicorn', '3.1.5'
+gem 'unicorn', '5.0.1'
 gem "figaro", '1.1.1'
 
 group :development, :test do
