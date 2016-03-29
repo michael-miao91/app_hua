@@ -31,6 +31,9 @@ gem 'jbuilder', '~> 2.0'
 # gem 'capistrano-rails', group: :development
 gem 'unicorn', '5.0.1'
 gem "figaro", '1.1.1'
+gem 'grape',  '0.15.0'
+
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -39,6 +42,7 @@ group :development, :test do
   gem 'capistrano-rails', '1.1.6'
   gem 'capistrano-bundler', '1.1.4'
   gem 'capistrano-rvm', '0.1.2'
+  gem 'grape-rails-routes'
 end
 
 group :development do
