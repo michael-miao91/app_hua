@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Devices</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>serial_number</th>
+    <th>sim_number</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @devices.each do |device| %>
+      <tr>
+        <td><%= device.serial_number %></td>
+        <td><%= device.sim_number %></td>
+        <td><%= link_to 'Show', device %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>

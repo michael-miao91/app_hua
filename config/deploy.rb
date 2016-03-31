@@ -2,7 +2,7 @@
 # lock '3.1.0'
 set :pty, true
 set :application, 'app_hua'
-set :deploy_user, 'rails'
+set :deploy_user, 'deploy'
 set :repo_url, 'git@github.com:michael-miao91/app_hua.git'
 
 # setup repo details
