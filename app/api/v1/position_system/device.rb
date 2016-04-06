@@ -13,6 +13,7 @@ class V1::PositionSystem::Device < Grape::API
       lat = obj_arr[3]
       lng = obj_arr[2]
       PositionSystem::Log.create(lng: lng, lat: lat, device_id: device.id)
+      device.update_current_position(lng, lat)
 
       {success: true}
     end

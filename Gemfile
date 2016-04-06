@@ -32,6 +32,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'unicorn', '5.0.1'
 gem "figaro", '1.1.1'
 gem 'grape',  '0.15.0'
+gem 'grape-entity'
 
 
 
