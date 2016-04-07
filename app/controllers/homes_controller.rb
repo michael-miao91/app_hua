@@ -1,5 +1,5 @@
 class HomesController < ApplicationController
   def index
-    @devices = PositionSystem::Device.all
+    @devices = PositionSystems::Device.all
   end
 end

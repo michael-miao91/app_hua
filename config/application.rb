@@ -35,5 +35,12 @@ module AppHua
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+    config.autoload_paths.push(*%W(#{config.root}/lib))
+    # Code is not reloaded between requests
+    config.cache_classes = false
+
+    # Full error reports are disabled and caching is turned on
+    config.consider_all_requests_local       = true
+    config.action_controller.perform_caching = false
   end
 end

@@ -3,9 +3,9 @@ Rails.application.routes.draw do
   # root 'users#index'
   root 'homes#index'
   get "homes/index"
-  namespace :position_system do
+  namespace :position_systems do
     resources :devices
   end
 
-  mount Dispatch => "/api"
+  mount API::Dispatch => "/api"
 end

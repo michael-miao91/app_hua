@@ -1,6 +1,6 @@
-class PositionSystem::DevicesController < ApplicationController
+class PositionSystems::DevicesController < ApplicationController
   def show
-    device = PositionSystem::Device.find(params[:id])
+    device = PositionSystems::Device.find(params[:id])
     @device_log = device.logs.order(created_at: :desc)
   end
 end

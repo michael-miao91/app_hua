@@ -32,7 +32,10 @@ gem 'jbuilder', '~> 2.0'
 gem 'unicorn', '5.0.1'
 gem "figaro", '1.1.1'
 gem 'grape',  '0.15.0'
+
 gem 'grape-entity'
+# gem 'active_model_serializers', '0.9.2'
+# gem 'grape-active_model_serializers'
 
 
 
