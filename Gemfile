@@ -33,7 +33,7 @@ gem 'unicorn', '5.0.1'
 gem "figaro", '1.1.1'
 gem 'grape',  '0.15.0'
 
-gem 'grape-entity'
+gem 'grape-entity', '0.5.1'
 # gem 'active_model_serializers', '0.9.2'
 # gem 'grape-active_model_serializers'
 
@@ -46,7 +46,7 @@ group :development, :test do
   gem 'capistrano-rails', '1.1.6'
   gem 'capistrano-bundler', '1.1.4'
   gem 'capistrano-rvm', '0.1.2'
-  gem 'grape-rails-routes'
+  # gem 'grape-rails-routes'
 end
 
 group :development do
