@@ -32,7 +32,7 @@ module API
         helpers PositionSystem::V1::Helpers
 
         mount Device
-        mount ClintApp
+        mount ClientApp
         mount Session
       end
     end

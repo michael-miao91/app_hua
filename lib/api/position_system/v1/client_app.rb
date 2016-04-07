@@ -1,7 +1,7 @@
 module API
   module PositionSystem
     module V1
-      class ClintApp < Grape::API
+      class ClientApp < Grape::API
         resource "position_system" do
           params do
             requires :sim_number, type: String

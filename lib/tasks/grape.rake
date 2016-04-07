@@ -7,9 +7,9 @@ namespace :grape do
       path.sub!("/:version","")
       r = {
           method: route.route_method,
-          path: path,
-          params: route.route_params,
-          desc: route.route_description
+          path: path#,
+          # params: route.route_params,
+          # desc: route.route_description
       }
       puts r.map{|k,v| "#{k}:#{v}"}.join('  ')
     end
