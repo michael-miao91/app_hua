@@ -1,4 +1,4 @@
-class V1::PositionSystem::Device < Grape::API
+class PositionSystem::V1::Device < Grape::API
   resource "position_system/device" do
     params do
       requires :data, type: String

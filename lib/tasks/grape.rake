@@ -1,7 +1,7 @@
 namespace :grape do
   desc "TODO"
   task routes: :environment do
-    V1::Root.routes.each do |route|
+    PositionSystem::V1::Root.routes.each do |route|
       path = route.route_path
       path.sub!("(.:format)",".json")
       path.sub!("/:version","")

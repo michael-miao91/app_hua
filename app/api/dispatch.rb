@@ -1,5 +1,5 @@
 class Dispatch < Grape::API
-  mount V1::PositionSystem::Root
+  mount PositionSystem::V1::Root
 
   format :json
   content_type :json, 'application/json;charset=utf-8'

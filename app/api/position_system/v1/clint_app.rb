@@ -1,4 +1,4 @@
-class V1::PositionSystem::ClintApp < Grape::API
+class PositionSystem::V1::ClintApp < Grape::API
   resource "position_system" do
     params do
       requires :sim_number, type: String
@@ -9,7 +9,7 @@ class V1::PositionSystem::ClintApp < Grape::API
     end
     resource "device" do
       get "/current_position", serializer: ::PositionSystem::CurrentPosition  do
-        present @current_device.current_position, with: V1::PositionSystem::Entities::CurrentPosition
+        present @current_device.current_position, with: PositionSystem::V1::Entities::CurrentPosition
       end
 
       params do
@@ -25,7 +25,7 @@ class V1::PositionSystem::ClintApp < Grape::API
         requires :by_day,   type: String
       end
       get "/position_logs", serializer: ::PositionSystem::CurrentPosition  do
-        present @current_device.logs.where(created_at: params[:by_day].to_datetime.beginning_of_day..params[:by_day].to_datetime.end_of_day), with: V1::PositionSystem::Entities::Log
+        present @current_device.logs.where(created_at: params[:by_day].to_datetime.beginning_of_day..params[:by_day].to_datetime.end_of_day), with: PositionSystem::V1::Entities::Log
       end
     end
 

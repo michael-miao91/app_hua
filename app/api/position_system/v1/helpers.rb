@@ -1,4 +1,4 @@
-module V1::PositionSystem::Helpers
+module PositionSystem::V1::Helpers
       def current_device
         @current_device ||= PositionSystem::Device.find_by_sim_number_and_serial_number(params[:sim_number],params[:serial_number])
       end

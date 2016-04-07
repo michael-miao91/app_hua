@@ -1,4 +1,4 @@
-class V1::PositionSystem::Session < Grape::API
+class PositionSystem::V1::Session < Grape::API
   resources "position_system/sessions" do
     params do
       requires :login, type: String

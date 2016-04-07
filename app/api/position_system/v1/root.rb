@@ -1,4 +1,4 @@
-class V1::PositionSystem::Root < Grape::API
+class PositionSystem::V1::Root < Grape::API
   version 'v1'
 
   default_error_formatter :json
@@ -26,7 +26,7 @@ class V1::PositionSystem::Root < Grape::API
     end
   end
 
-  helpers V1::PositionSystem::Helpers
+  helpers PositionSystem::V1::Helpers
 
   mount Device
   mount ClintApp
