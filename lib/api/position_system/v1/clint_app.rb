@@ -18,7 +18,7 @@ module API
             params do
               requires :phone_number,   type: String
             end
-            post "/phone_number", serializer: ::PositionSystems::UserProfile do
+            post "/phone_number" do
               status 200
               PositionSystems::UserProfile.create(device_id: @current_device.id, phone_number: params[:phone_number])
               {success: true}
@@ -27,7 +27,7 @@ module API
             params do
               requires :by_day,   type: String
             end
-            get "/position_logs", serializer: ::PositionSystems::CurrentPosition  do
+            get "/position_logs" do
               present @current_device.logs.where(created_at: params[:by_day].to_datetime.beginning_of_day..params[:by_day].to_datetime.end_of_day), with: PositionSystem::V1::Entities::Log
             end
           end
