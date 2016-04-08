@@ -4,7 +4,7 @@ module API
       class Device < Grape::API
         resource "position_system/device" do
           params do
-            requires :data, type: String
+            requires :data, type: String, desc: '参数例子:869013021002111,13510490732,113844563,225965331,80001,0,0,0'
           end
 
           post do

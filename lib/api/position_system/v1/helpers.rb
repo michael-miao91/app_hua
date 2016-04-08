@@ -3,8 +3,6 @@ module API
     module V1
       module Helpers
         def current_device
-          # device = PositionSystems::Device.find_by_serial_number(params[:login])
-
           @current_device ||= PositionSystems::Device.find_by_serial_number(params[:serial_number])
         end
 
