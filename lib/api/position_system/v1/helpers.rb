@@ -3,7 +3,9 @@ module API
     module V1
       module Helpers
         def current_device
-          @current_device ||= PositionSystems::Device.find_by_sim_number_and_serial_number(params[:sim_number], params[:serial_number])
+          # device = PositionSystems::Device.find_by_serial_number(params[:login])
+
+          @current_device ||= PositionSystems::Device.find_by_serial_number(params[:serial_number])
         end
 
         def authenticate!

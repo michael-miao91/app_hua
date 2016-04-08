@@ -4,7 +4,7 @@ module API
       class ClientApp < Grape::API
         resource "position_system" do
           params do
-            requires :sim_number, type: String
+            # requires :sim_number, type: String
             requires :serial_number, type: String
           end
           before do
