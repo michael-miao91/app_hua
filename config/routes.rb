@@ -4,7 +4,11 @@ Rails.application.routes.draw do
   root 'homes#index'
   get "homes/index"
   namespace :position_systems do
-    resources :devices
+    resources :devices do
+      collection do
+        get :map
+      end
+    end
   end
 
   mount API::Dispatch => "/api"

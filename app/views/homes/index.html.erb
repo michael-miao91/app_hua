@@ -16,6 +16,7 @@
         <td><%= device.serial_number %></td>
         <td><%= device.sim_number %></td>
         <td><%= link_to 'Show', device %></td>
+        <td><%= link_to 'Map', map_position_systems_devices_path(id: device.id) %></td>
       </tr>
   <% end %>
   </tbody>
