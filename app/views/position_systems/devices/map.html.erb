@@ -9,8 +9,12 @@
   // 百度地图API功能
   //GPS坐标
 //  2235.78897, 11350.66514
-  var x = "<%= @current_position.lat.to_f/100 %>";
-  var y = "<%= @current_position.lng.to_f/100 %>";
+
+//  var x = 114.0324669;
+//  var y = 22.3691418;
+
+  var x = "<%= @current_position.lng.to_f/100 %>";
+  var y = "<%= @current_position.lat.to_f/100 %>";
   var ggPoint = new BMap.Point(x,y);
 
   //地图初始化
