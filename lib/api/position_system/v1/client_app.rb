@@ -16,7 +16,6 @@ module API
               #     code: 1,
               #     data:
               # }
-              pp @current_device
               present @current_device.current_position, with: PositionSystem::V1::Entities::CurrentPosition
             end
 
