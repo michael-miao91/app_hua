@@ -7,11 +7,11 @@ module API
         end
 
         def authenticate!
-          error!({ 'error' => '401 Unauthorized' }, 401) unless current_device
+          error!({status: "error", code: 0, msg:  "401 Unauthorized"}, 401) unless current_device
         end
 
         def error_404!
-          error!({ 'error' => 'Page not found' }, 404)
+          error!({status: "error", code: 0, msg:  "Page not found"}, 404)
         end
 
       end

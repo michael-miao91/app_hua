@@ -10,9 +10,9 @@ module API
             status 200
             device = PositionSystems::Device.find_by_serial_number(params[:login])
             if device.present?
-              {success: true}
+              {status: "success", code: 1}
             else
-              {error: 'wrong login'}
+              {status: "error", code: 0, msg:  "wrong login"}
             end
           end
         end
